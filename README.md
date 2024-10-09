@@ -21,3 +21,5 @@ Interactive Button: Opens the code compiler in a new tab, encouraging users to e
 Code Compiler: HTML, CSS, JavaScript, Google Fonts (Poppins)
 Landing Page: GSAP, Locomotive Scroll, HTML, CSS
 
+# DEMO
+https://code-compiler-barix.netlify.app/
