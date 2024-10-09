@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compiler</title>
+    <link rel="stylesheet" href="codes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+
+            <label> <img src="   https://cdn-icons-png.flaticon.com/512/174/174854.png " alt=""> HTML</label>
+            <textarea id="html-code" onkeyup="run()"></textarea>
+
+            <label > <img src="   https://cdn-icons-png.flaticon.com/512/11516/11516361.png " alt=""> CSS</label>
+            <textarea id="css-code" onkeyup="run()"></textarea>
+
+            <label > <img src="   https://cdn-icons-png.flaticon.com/512/5968/5968292.png " alt=""> JavaScript</label>
+            <textarea id="js-code" onkeyup="run()"></textarea>
+
+        </div>
+        <div class="right">
+            <label><img src="play-button-arrowhead.png" alt="">Output</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function run(){
+
+            let htmlCode = document.querySelector("#html-code").value;
+            let cssCode = document.querySelector("#css-code").value;
+            let jsCode = document.querySelector("#js-code").value;
+            let output = document.querySelector("#output")
+
+            output.contentDocument.body.innerHTML = htmlCode+"<style>"+cssCode+"</style>";
+            output.contentWindow.eval(jsCode);
+
+
+        }
+    </script>
+</body>
+</html>
